@@ -54,10 +54,10 @@ try:
                 time.sleep(15)
 
             if time_count % 60 == 0:  # repead by 10 min
-                sms(to=phone_number, text="ASB Internet connection over delta is still down for 10 min!\nSent from script on cloud!")
+                sms(to=phone_number, text="ASB Internet connection over " + hostname + " is still down for 10 min!\nSent from script on cloud!")
 
             if command_status is False:  # If is True, it means last time up_commands was sent, so it is working over Delta right now
-                sms(to=phone_number, text="ASB Internet connection over delta is down!\nSent from script on cloud!")
+                sms(to=phone_number, text="ASB Internet connection over " + hostname + " is down!\nSent from script on cloud!")
                 command_status = True
 
 
